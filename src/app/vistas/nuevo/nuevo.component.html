@@ -1,0 +1,63 @@
+<app-header></app-header>
+
+<div class="container rounded" style="background-color: black; border-radius: 10px; border: 1 solid black;">
+  <form [formGroup]="nuevoForm" (ngSubmit) = "postForm(nuevoForm.value)">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-dark">Guardar</button> <span style="color: black;">1</span>
+          <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h3 style="text-align: center; color: whitesmoke;"> Editar Empleados </h3>
+    <br>
+    <label for="exampleFormControlInput1">Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre del trabajador" formControlName="nombre">
+    <br>
+    <label for="exampleFormControlInput1">correo</label>
+    <input type="text" class="form-control" placeholder="Correo del trabajador" formControlName="correo">
+    <br>
+    <div class="row">
+
+      <div class="col-4">
+        <label for="exampleFormControlInput1">DNI</label>
+        <input type="text" class="form-control" placeholder="DNI del Trabajador" formControlName="dni">
+      </div>
+
+      <div class="col-8">
+        <label for="exampleFormControlInput1">Direccion</label>
+        <input type="text" class="form-control" placeholder="Direccion del Trabajador" formControlName="direccion">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-4">
+        <label for="exampleFormControlInput1">Codigo Postal</label>
+        <input type="text" class="form-control" placeholder="Codigo Postal" formControlName="codigoPostal">
+      </div>
+      <div class="col-3">
+        <label for="exampleFormControlInput1">Genero</label>
+        <input type="text" class="form-control" placeholder="Genero" formControlName="genero">
+      </div>
+      <div class="col-5">
+        <label for="exampleFormControlInput1">Telefono</label>
+        <input type="text" class="form-control" placeholder="Telefono" formControlName="telefono">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="exampleFormControlInput1">Fecha de Nacimiento</label>
+        <input type="text" class="form-control" placeholder="Fecha de Nacimiento" formControlName="fechaNacimiento">
+      </div>
+    </div>
+  </form>
+  <hr>
+</div>
+<br>
+<hr>
+
+<app-footer>
+</app-footer>

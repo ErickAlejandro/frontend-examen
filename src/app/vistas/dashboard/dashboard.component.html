@@ -1,0 +1,39 @@
+<app-header>
+
+</app-header>
+
+  <h3 style="text-align: center;">Lista de trabajadores</h3>
+  <hr>
+<div class="container">
+  <button type="button" class="btn btn-primary"(click)="nuevoTrabajador()">Agregar Trabajador</button>
+</div>
+<br>
+
+<div class="container">
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Foto</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">DNI</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let trabajador of trabajadores" (click)= "editarTrabajador(trabajador.PacienteId)">
+        <th scope="row">{{ trabajador.PacienteId}}</th>
+        <td><img src="https://cdnb.20m.es/sites/112/2019/04/cara6-620x618.jpg" width="50px" alt=""></td>
+        <td>{{ trabajador.Nombre}}</td>
+        <td>{{ trabajador.DNI}}</td>
+        <td>{{ trabajador.Telefono}}</td>
+        <td>{{ trabajador.Correo}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer>
+
+</app-footer>
