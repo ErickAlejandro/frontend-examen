@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
   checkLogalStorage(){
     if(localStorage.getItem('token')){
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['informacion']);
     }
   }
 
@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
       let dataResponse:ResponseI = data;
       if(dataResponse.status == "ok"){
         localStorage.setItem("token", dataResponse.result.token);
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['informacion']);
       }else{
         this.errorStatus = true;
         this.errorMsj = dataResponse.result.error_msg;

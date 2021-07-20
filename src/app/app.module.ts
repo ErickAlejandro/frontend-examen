@@ -11,13 +11,17 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { InformacionComponent } from './informacion/informacion.component';
+import { ProgramadorComponent } from './programador/programador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    routingComponents
+    routingComponents,
+    InformacionComponent,
+    ProgramadorComponent
 
   ],
   imports: [

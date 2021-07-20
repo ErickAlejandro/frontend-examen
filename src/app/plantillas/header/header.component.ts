@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  salir(){
+    this.router.navigate(['dashboard']);
+  }
+
+  image(){
+    this.router.navigate(['informacion']);
+  }
+
+  programador(){
+    this.router.navigate(['programador']);
+  }
+
+  informacion(){
+    this.router.navigate(['informacion']);
   }
 
 }
